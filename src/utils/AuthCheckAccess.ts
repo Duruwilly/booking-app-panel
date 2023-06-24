@@ -1,0 +1,25 @@
+import { useEffect, useState, useRef } from "react";
+import { useAuthContext } from "../context/AuthContext";
+
+export const AuthCheckAccess = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [checkingStatus, setCheckingStatus] = useState(true);
+  const isMounted = useRef(true);
+  //   const {authenticated} = useSelector((state: RootState) => state.authReducer);
+  const { user } = useAuthContext();
+
+  useEffect(() => {
+    if (isMounted) {
+      if (user) {
+        setLoggedIn(true);
+      }
+      setCheckingStatus(false);
+    }
+
+    return () => {
+      isMounted.current = false;
+    };
+  }, [isMounted]);
+
+  return { loggedIn, checkingStatus };
+};
