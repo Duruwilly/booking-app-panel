@@ -78,7 +78,6 @@ export const AuthContextProvider = ({ children }: any) => {
             {children}
         </AuthContext.Provider>
     );
-
 };
 
 export const useAuthContext = () => useContext(AuthContext) as AuthReturnType;

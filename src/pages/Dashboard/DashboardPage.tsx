@@ -16,7 +16,7 @@ const DashboardPage = () => {
                 <div className='' style={{flex: "0 0 auto", width: "24%"}} >
                     <Featured />
                 </div>
-                <div className='w-ful overflow-x-auto' style={{flex: "1 1 auto", width: "76%"}} >
+                <div className='overflow-x-auto' style={{flex: "1 1 auto", width: "76%"}} >
                     <RecentBookings />
                 </div>
             </div>

@@ -16,7 +16,7 @@ const Unauthorize = () => {
                     </p>
                 </div>
                 <div className="mt-5 text-center">
-                    <Link className="text-red-900" to="/dashboard">
+                    <Link className="text-white px-4 py-2 bg-secondary rounded" to="/dashboard">
                         Return back to home
                     </Link>
                 </div>

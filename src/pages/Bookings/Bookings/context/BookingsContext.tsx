@@ -2,7 +2,7 @@ import { createContext, Dispatch, SetStateAction, useContext, useState } from "r
 import QueryString from "qs";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { BASE_URL } from "../../../constant/base-urls";
+import { BASE_URL } from "../../../../constant/base-urls";
 
 
 type BookingsType = {
