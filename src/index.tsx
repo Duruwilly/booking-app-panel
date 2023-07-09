@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
+import { persistor, store } from './redux/store';
+import { PersistGate } from "redux-persist/integration/react";
 import { AuthContextProvider } from './context/AuthContext';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -12,10 +13,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <Provider store={store}>
-    <AuthContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </AuthContextProvider>
+    <PersistGate loading={null} persistor={persistor}>
+      <AuthContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </AuthContextProvider>
+    </PersistGate>
   </Provider>
 );

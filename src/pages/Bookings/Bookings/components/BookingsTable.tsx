@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
-import { Paginator } from '../../../components/Paginator'
-import Spinner from '../../../components/spinner/Spinner'
+import { Paginator } from '../../../../components/Paginator'
+import Spinner from '../../../../components/spinner/Spinner'
 import { useBookingsContext } from '../context/BookingsContext'
 import TableData from './TableData'
 

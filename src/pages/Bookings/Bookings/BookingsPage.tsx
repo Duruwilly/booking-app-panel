@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useTitle } from '../../hooks/useTitle';
+import { useTitle } from '../../../hooks/useTitle';
 import BookingsTable from './components/BookingsTable';
 import FilterForm from './components/FilterForm';
 import { useBookingsContext } from './context/BookingsContext';

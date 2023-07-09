@@ -1,6 +1,6 @@
 import { format } from 'date-fns'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const TableData = ({ bookings }: any) => {
     const navigate = useNavigate()
@@ -37,7 +37,9 @@ const TableData = ({ bookings }: any) => {
                 {bookings?.createdAt ? format(new Date(bookings?.createdAt), "MMM dd yyy, hh:mm a") : "-"}
             </td>
             <td>
-                <button className='btn bg-primar table-header-dark py-1 px-4 bg-opacity-10' onClick={() => navigate(`/single-booking/${bookings._id}`)}>view</button>
+                <Link to={`/single-booking/${bookings?._id}`}>
+                    <button className='btn bg-primar table-header-dark py-1 px-4 bg-opacity-10'>view</button>
+                </Link>
             </td>
         </tr>
     )

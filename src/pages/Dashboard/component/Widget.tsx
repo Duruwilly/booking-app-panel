@@ -97,8 +97,6 @@ const Widget = () => {
         };
     }, []);
 
-
-
     return (
         <section className=''>
             <main className='flex gap-5 p-5'>
